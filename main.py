@@ -79,9 +79,9 @@ def load_dataset(dataset):
     # Get encoding between pixel valus in label images and RGB colors
     class_encoding = train_set.color_encoding
 
-    # Remove the road_marking class from the CamVid dataset as it's merged
+    # Remove the road_marking class from the vaihingen dataset as it's merged
     # with the road class
-    if args.dataset.lower() == 'camvid':
+    if args.dataset.lower() == 'vaihingen':
         del class_encoding['road_marking']
 
     # Get number of classes to predict
@@ -286,8 +286,8 @@ if __name__ == '__main__':
             args.save_dir)
 
     # Import the requested dataset
-    if args.dataset.lower() == 'camvid':
-        from data import CamVid as dataset
+    if args.dataset.lower() == 'vaihingen':
+        from data import vaihingen as dataset
     elif args.dataset.lower() == 'cityscapes':
         from data import Cityscapes as dataset
     else:

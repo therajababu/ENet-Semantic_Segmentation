@@ -61,25 +61,25 @@ def get_arguments():
     # Dataset
     parser.add_argument(
         "--dataset",
-        choices=['camvid', 'cityscapes'],
-        default='camvid',
-        help="Dataset to use. Default: camvid")
+        choices=['vaihingen', 'cityscapes'],
+        default='vaihingen',
+        help="Dataset to use. Default: vaihingen")
     parser.add_argument(
         "--dataset-dir",
         type=str,
-        default="data/CamVid",
+        default="data/vaihingen",
         help="Path to the root directory of the selected dataset. "
-        "Default: data/CamVid")
+        "Default: data/vaihingen")
     parser.add_argument(
         "--height",
         type=int,
-        default=360,
-        help="The image height. Default: 360")
+        default=512,
+        help="The image height. Default: 512")
     parser.add_argument(
         "--width",
         type=int,
-        default=480,
-        help="The image width. Default: 480")
+        default=512,
+        help="The image width. Default: 512")
     parser.add_argument(
         "--weighing",
         choices=['enet', 'mfb', 'none'],
@@ -109,7 +109,7 @@ def get_arguments():
               "predictions."))
     parser.add_argument(
         "--device",
-        default='cuda',
+        default='cpu',
         help="Device on which the network will be trained. Default: cuda")
 
     # Storage settings
