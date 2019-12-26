@@ -1,19 +1,13 @@
-# PyTorch-ENet
+## Deep Learning Methods for Semantic Segmentation
 
-PyTorch (v1.0.0) implementation of [*ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation*](https://arxiv.org/abs/1606.02147), ported from the lua-torch implementation [ENet-training](https://github.com/e-lab/ENet-training) created by the authors.
+The main aim of the study is to develop an algorithm based Deep Learning methods for Semantic Segmentation of aerial images (or road scenarios), which allows determine objects on images with acceptable accuracy and inference speed close to real-time conditions.
 
-This implementation has been tested on the CamVid and Cityscapes datasets. Currently, a pre-trained version of the model trained in CamVid and Cityscapes is available [here](https://github.com/davidtvs/PyTorch-ENet/tree/master/save).
+<br/>
+<br/>
 
+## PyTorch-ENet
 
-|                               Dataset                                | Classes <sup>1</sup> | Input resolution | Batch size | Epochs |   Mean IoU (%)    | GPU memory (GiB) | Training time (hours)<sup>2</sup> |
-| :------------------------------------------------------------------: | :------------------: | :--------------: | :--------: | :----: | :---------------: | :--------------: | :-------------------------------: |
-| [CamVid](http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/) |          11          |     480x360      |     10     |  300   | 52.85<sup>3</sup> |       4.2        |                 1                 |
-|          [Cityscapes](https://www.cityscapes-dataset.com/)           |          19          |     1024x512     |     4      |  300   | 60.94<sup>4</sup> |       5.4        |                24                 |
-
-<sup>1</sup> When referring to the number of classes, the void/unlabeled class is always excluded.<br/>
-<sup>2</sup> Just for reference since changes in implementation, datasets, and hardware can lead to very different results. Reference hardware: Nvidia GTX 1070 and an Intel Core i5-4570 3.2GHz. You can also train for 100 epochs or so and get similar mean IoU (± 2%).<br/>
-<sup>3</sup> Test set.<br/>
-<sup>4</sup> Validation set.
+PyTorch (v1.0.0) implementation of [*ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation*](https://arxiv.org/abs/1606.02147), ported from the lua-torch implementation [ENet-training](https://github.com/e-lab/ENet-training) created by the authors. The actual source code of PyTorch-ENet is [here](https://github.com/davidtvs/PyTorch-ENet).
 
 
 ## Installation
